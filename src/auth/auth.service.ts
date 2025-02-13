@@ -27,7 +27,7 @@ export class AuthService {
 
     delete user.hash;
 
-    return { message: 'i have logged in' };
+    return user;
   }
 
   async register(authDto: AuthDto) {
