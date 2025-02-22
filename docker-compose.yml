@@ -10,6 +10,16 @@ services:
       POSTGRES_DB: nest
     networks:
       - vergaraaa
+  test-db:
+    image: postgres:13
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: nest
+    networks:
+      - vergaraaa
 
 networks:
   vergaraaa:
